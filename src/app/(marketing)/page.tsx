@@ -47,7 +47,7 @@ const HomePage = () => {
                                 Zero code, maximum speed. Makes professional business easy, fast and fun while delivering best-in-class communication and performance.
                             </p>
                             <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full">
-                                <Link href="#" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none">
+                                <Link href="https://www.goodgainswork.com/" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none">
                                     <p className="text-foreground text-sm text-center md:text-base font-medium pl-4 pr-4 lg:pr-0">
                                         ✨ {"  "} Start building your dream business now!
                                     </p>
@@ -290,7 +290,7 @@ const HomePage = () => {
                                 Build stunning websites with GoodGains&apos;s intuitive business builder and powerful AI workspace
                             </p>
                             <Button variant="white" className="mt-6" asChild>
-                                <Link href="/sign-in">
+                                <Link href="https://www.goodgainswork.com/">
                                     Get started for free
                                     <ArrowRight className="w-4 h-4 ml-2" />
                                 </Link>
