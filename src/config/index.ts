@@ -16,8 +16,8 @@ export const SITE_CONFIG: Metadata = {
         ]
     },
     openGraph: {
-        title: "Astra - AI Powered Website Builder",
-        description: "Astra is an AI powered website builder that helps you create a website in minutes. No coding skills required. Get started for free!",
+        title: "GoodGains - AI Powered Innovation",
+        description: "GoodGains is an AI powered secure workspace that helps you create a business in minutes. No coding skills required. Get started for free!",
         images: [
             {
                 url: "/assets/og-image.png",
