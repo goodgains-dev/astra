@@ -6,7 +6,7 @@ export const SITE_CONFIG: Metadata = {
         default: "Astra - AI Powered Website Builder",
         template: `%s | Astra`
     },
-    description: "Astra is an AI powered website builder that helps you create a website in minutes. No coding skills required. Get started for free!",
+    description: "GoodGains is an AI powered secure workspace that helps you create a business in minutes. No coding skills required. Get started for free!",
     icons: {
         icon: [
             {
