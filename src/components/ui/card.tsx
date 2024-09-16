@@ -5,24 +5,6 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 // Popup with Video Player
-const PopupVideoPlayer = ({ videoSrc, onClose }) => {
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
-      <div className="relative bg-white rounded-lg shadow-lg p-6 max-w-lg w-full">
-        <button
-          className="absolute top-2 right-2 text-black"
-          onClick={onClose}
-        >
-          ✕
-        </button>
-        <h2 className="text-xl font-semibold mb-4">Video Player</h2>
-        <div className="relative">
-          <video controls src={videoSrc} className="rounded-md shadow-md w-full" />
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const Card = React.forwardRef<
   HTMLDivElement,
@@ -141,11 +123,6 @@ const PopupMenuWithVideo = () => {
           <p>Footer Content</p>
         </CardFooter>
       </Card>
-
-      {/* Popup with Video */}
-      {showPopup && selectedVideo && (
-        <PopupVideoPlayer videoSrc={selectedVideo} onClose={closePopup} />
-      )}
     </div>
   );
 };
