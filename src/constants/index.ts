@@ -3,51 +3,57 @@ import { Icons } from "@/components";
 export const perks = [
     {
         icon: Icons.auth,
-        title: "Sign Up",
-        info: "Create your free account to get started with Astra.",
+        title: "Digital Identity",
+        info: "Own your digital prescence with GoodGains.",
     },
     {
         icon: Icons.customize,
         title: "Customize",
-        info: "Choose a template and customize it to fit your needs.",
+        info: "Choose settings and customize it to fit your needs.",
     },
     {
         icon: Icons.launch,
         title: "Launch",
-        info: "Publish your website and share it with the world.",
+        info: "Publish your website and boost your productivity.",
     },
 ];
 
 export const features = [
     {
+        key: 'feature1',
         icon: Icons.bolt,
-        title: "Fast Setup",
-        info: "Get your website up and running in minutes with our intuitive AI-powered builder.",
+        title: "Fast Communication",
+        info: "Get your business up and running in minutes with our intuitive AI-powered platform.",
     },
     {
+        key: 'feature2',
         icon: Icons.palette,
-        title: "Customizable Templates",
+        title: "Customizable Platform",
         info: "Choose from a variety of stunning templates and customize them to suit your brand.",
     },
     {
+        key: 'feature3',
         icon: Icons.seo,
-        title: "SEO Optimized",
-        info: "Built-in SEO features ensure your website ranks well on search engines.",
+        title: "AI Analysis",
+        info: "Built-in AI analysis features ensure your company performs well with your own AI search engine.",
     },
     {
+        key: 'feature4',
         icon: Icons.monitor,
-        title: "Responsive Design",
-        info: "Your website will look great on any device, from desktops to mobile phones.",
+        title: "AI Design",
+        info: "Your website design fully automated from desktops to mobile phones.",
     },
     {
+        key: 'feature5',
         icon: Icons.shop,
-        title: "E-Commerce Ready",
-        info: "Start selling online with our e-commerce features and integrations.",
+        title: "Handle Sales",
+        info: "With our own CRM and AI spreadhseets tracking sales is seamless.",
     },
     {
+        key: 'feature6',
         icon: Icons.server,
         title: "Secure Hosting",
-        info: "Enjoy peace of mind with secure and reliable hosting for your website.",
+        info: "Enjoy peace of mind with secure and reliable workspaces for your organization.",
     },
 ];
 

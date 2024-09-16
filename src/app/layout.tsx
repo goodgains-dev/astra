@@ -5,6 +5,10 @@ import "@/styles/globals.css";
 import { ClerkProvider } from '@clerk/nextjs';
 import { dark } from '@clerk/themes';
 import { Inter } from "next/font/google";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 
 const font = Inter({ subsets: ["latin"] });
 
