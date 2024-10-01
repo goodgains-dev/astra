@@ -12,7 +12,7 @@ const HomePage = () => {
       id: 0, 
       title: "",
       description: "",
-      video: "/section0.mp4" // Path to your .mp4 video for Section 0
+      video: "/goodgains1.mp4" // Path to your .mp4 video for Section 0
     },
     { 
       id: 1, 
@@ -88,7 +88,6 @@ const HomePage = () => {
           <section
             key={section.id}
             className="relative h-screen bg-cover bg-center p-10 flex flex-col items-center overflow-hidden"
-            style={styles[`section${index + 1}` as keyof typeof styles]}  // Apply corresponding styles
           >
             <video className="absolute inset-0 w-full h-full object-cover" src={section.video} autoPlay loop muted />
             <div className="absolute inset-0 bg-gray-900/40" />
