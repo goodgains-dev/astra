@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 // Remove the createRouteMatcher and clerkMiddleware references
 
-export function middleware(req) {
+export function middleware() {
   // Define any custom logic you need for your middleware here
   // Example: Redirect if user is not authenticated
 
