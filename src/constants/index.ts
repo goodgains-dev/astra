@@ -4,17 +4,17 @@ export const perks = [
     {
         icon: Icons.auth,
         title: "Digital Identity",
-        info: "Own your digital prescence with GoodGains.",
+        info: "Own your digital presence with GoodGains.",
     },
     {
         icon: Icons.customize,
-        title: "Customize",
-        info: "Choose settings and customize it to fit your needs.",
+        title: "Customization",
+        info: "End-to-end customization ranging from data security options, to UI feel.",
     },
     {
         icon: Icons.launch,
         title: "Launch",
-        info: "Publish your website and boost your productivity.",
+        info: "Manage and launch your business, all within GoodGains Work.",
     },
 ];
 
@@ -149,3 +149,4 @@ export const reviews = [
         body: "I'm at a loss for words. This is amazing. I love it.",
     },
 ];
+

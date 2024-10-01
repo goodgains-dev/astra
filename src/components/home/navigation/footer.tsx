@@ -12,11 +12,13 @@ const Footer = () => {
             <div className="grid gap-8 xl:grid-cols-3 xl:gap-8 w-full">
 
                 <div className="flex flex-col items-start justify-start md:max-w-[200px]">
-                    <div className="flex items-start">
-                        <Icons.logo className="w-7 h-7" />
-                    </div>
+                <img
+                src="/NavLogo.png" // Update this path to your actual PNG file
+                alt="GoodGains Logo"
+                className="w-8 h-8"
+              />
                     <p className="text-muted-foreground mt-4 text-sm text-start">
-                        Build beautiful, functional websites, without writing code
+                        
                     </p>
                     <span className="mt-4 text-neutral-200 text-sm flex items-center">
                         <Heart className="w-3.5 h-3.5 ml-1 fill-primary text-primary" />

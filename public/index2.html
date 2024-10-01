@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workflow | GoodGains</title>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Scoped CSS for the navbar */
+    .navbar {
+      background-color: #000; /* Navbar background */
+      color: #fff; /* Navbar text color */
+      padding: 10px 20px; /* Navbar padding */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Navbar shadow */
+      position: fixed; /* Fix navbar at the top */
+      top: 0; /* Position at the top of the screen */
+      width: 100%; /* Full width */
+      z-index: 1000; /* Ensure navbar is above other elements */
+      display: flex; /* Flex container for alignment */
+      justify-content: center; /* Center the navigation items */
+      align-items: center; /* Center align items vertically */
+      height: 60px; /* Fixed height */
+    }
+
+    .navbar .logo-container {
+      position: absolute; /* Position absolute to keep it outside of the centered nav items */
+      left: 20px; /* Align it to the left */
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .navbar .logo span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff; /* White text for logo */
+    }
+
+    .navbar .nav-items {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .nav-item {
+      margin: 0 10px;
+      font-size: 16px;
+      color: #fff; /* White text for buttons */
+      text-decoration: none;
+      display: inline-block; /* Ensure items stay inline */
+      transition: color 0.3s ease; /* Smooth transition for color */
+    }
+
+    .navbar .nav-item:hover {
+      color: gray; /* Change text color on hover */
+    }
+
+    /* Margin to push content below navbar */
+    .container {
+      margin-top: 60px; /* Same as navbar height */
+    }
+  </style>
+</head>
+<body>
+ <!-- Navbar with scoped class -->
+ <nav class="navbar">
+  <a href="/" class="logo-container">
+    <div class="logo">
+      <img src="/NavLogo.png" alt="Logo" />
+      <span>GoodGains</span>
+    </div>
+  </a>
+  <div class="nav-items">
+    <a href="/index.html" class="nav-item">Creation</a>
+    <a href="/index2.html" class="nav-item">Organization</a>
+    <a href="/index3.html" class="nav-item">Design</a>
+    <a href="/index4.html" class="nav-item">Analysis</a>
+    <a href="/index5.html" class="nav-item">Marketing</a>
+  </div>
+</nav>
+
+  <div class="container">
+    <section class="hero">
+      <h1></h1>
+      <p>
+        GoodGains Work Organization-Workflow
+      </p>
+    </section>
+
+    <section class="about">
+      <div class="about-img">
+        <img src="/cube.png" alt="" />
+      </div>
+      <div class="about-copy">
+        <h1>Organization Simplified</h1>
+      </div>
+    </section>
+
+    <section class="sticky">
+      <div class="intro">
+        <div class="intro-col">
+          <p>Schedule, Task, Communicate</p>
+          <p></p>
+        </div>
+        <div class="intro-col">
+          <p></p>
+        </div>
+      </div>
+
+      <div class="img-1">
+        <img src="/workflow_scheduling.png" alt="" />
+      </div>
+
+      <div class="img-2">
+        <img src="/workflow-task.PNG" alt="" />
+      </div>
+
+      <div class="img-3">
+        <img src="chat-workflow.PNG" alt="" />
+      </div>
+
+      <div class="copy">
+        <h1>
+          
+        </h1>
+      </div>
+    </section>
+
+    <section class="footer">
+      <h1>
+        Schedule <br />
+        Task <br />
+        Communicate <br />
+      </h1>
+    </section>
+  </div>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>
