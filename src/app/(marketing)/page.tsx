@@ -82,12 +82,12 @@ const HomePage = () => {
             {/* Section 0 Content */}
           </div>
         </section>
-
         {/* Render the rest of the sections */}
         {sections.slice(1).map((section, index) => (
           <section
             key={section.id}
             className="relative h-screen bg-cover bg-center p-10 flex flex-col items-center overflow-hidden"
+            style={styles[`section${index + 1}` as keyof typeof styles]} // Apply corresponding styles
           >
             <video className="absolute inset-0 w-full h-full object-cover" src={section.video} autoPlay loop muted />
             <div className="absolute inset-0 bg-gray-900/40" />
