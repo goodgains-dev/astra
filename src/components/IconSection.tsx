@@ -1,6 +1,6 @@
 'use client'; // Mark as a client component
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, SetStateAction, AwaitedReactNode, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal } from 'react';
 import { Scrollbars } from 'react-custom-scrollbars-2'; // Import the Scrollbars component
 
 export default function IconSection() {
@@ -105,7 +105,7 @@ export default function IconSection() {
     };
   }, [selectedIcon]);
 
-  const handleIconClick = (icon) => {
+  const handleIconClick = (icon: SetStateAction<null>) => {
     setSelectedIcon(icon);
   };
 
@@ -122,7 +122,6 @@ export default function IconSection() {
           <div
             key={index}
             className="text-center cursor-pointer"
-            onClick={() => handleIconClick(icon)}
             style={{ overflow: 'visible' }} // Ensure the container allows visibility
           >
             <img
@@ -161,7 +160,6 @@ export default function IconSection() {
               </button>
               {/* Header without Gradient and Left-Aligned */}
               <h2 className="text-2xl font-bold mb-2 text-white relative text-left px-0 py-0">
-                {selectedIcon.header}
               </h2>
             </div>
 
@@ -181,8 +179,6 @@ export default function IconSection() {
                 />
               )}
             >
-              {/* Video Section */}
-              {selectedIcon.videoId && (
                 <div className="flex justify-center items-center mb-8">
                   <div className="w-full max-w-[1200px] bg-transparent p-4 rounded-lg ">
                     <h3 className="text-xl font-semibold mb-2 text-white">
@@ -190,7 +186,6 @@ export default function IconSection() {
                     </h3>
                     <div className="relative w-full h-0" style={{ paddingBottom: '56.25%' }}>
                       <iframe
-                        src={`https://www.youtube.com/embed/${selectedIcon.videoId}`}
                         title="Feature Overview Video"
                         allowFullScreen
                         className="absolute top-0 left-0 w-full h-full rounded-lg"
@@ -198,8 +193,6 @@ export default function IconSection() {
                     </div>
                   </div>
                 </div>
-              )}
-
               {/* Highlight Section Below Video */}
               <div className="w-full max-w-[1200px] bg-[#8c8d91] bg-opacity-20 p-6 rounded-lg shadow-inner mx-auto relative">
                 <h3 className="embossed-text text-4xl font-bold mb-4 text-white relative z-10">Key Features</h3>
@@ -209,9 +202,6 @@ export default function IconSection() {
                   <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-3 h-3 rotate-45 bg-white"></div> {/* Right Diamond */}
                 </div>
                 <ul className="text-left list-disc list-inside text-white space-y-4 relative z-20">
-                  {selectedIcon.highlights.map((highlight, index) => (
-                    <li key={index}>{highlight}</li>
-                  ))}
                 </ul>
               </div>
             </Scrollbars>
