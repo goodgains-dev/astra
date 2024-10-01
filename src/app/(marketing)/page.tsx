@@ -62,8 +62,7 @@ const HomePage = () => {
         <title>Home Page</title>
         {/* Importing Google fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
       <main className="w-full">
         {/* Section 0 */} 
@@ -89,7 +88,7 @@ const HomePage = () => {
           <section
             key={section.id}
             className="relative h-screen bg-cover bg-center p-10 flex flex-col items-center overflow-hidden"
-            style={styles[`section${index + 1}`]} // Apply corresponding styles
+            style={styles[`section${index + 1}` as keyof typeof styles]}  // Apply corresponding styles
           >
             <video className="absolute inset-0 w-full h-full object-cover" src={section.video} autoPlay loop muted />
             <div className="absolute inset-0 bg-gray-900/40" />
