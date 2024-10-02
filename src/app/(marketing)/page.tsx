@@ -32,7 +32,7 @@ const HomePage = () => {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
       <main className="w-full">
-        {/* Section 0 */} 
+        {/* Section 0 */}
         <section className="relative h-screen p-5 md:p-10 flex items-center justify-center overflow-hidden" style={styles.section0}>
           <img className="absolute inset-0 w-full h-full object-cover" src={sections[0].gif} alt="Section 0" />
           <div className="absolute inset-0 bg-black/10" />
@@ -45,7 +45,7 @@ const HomePage = () => {
           <section
             key={section.id}
             className="relative h-screen p-5 md:p-10 flex flex-col items-center justify-center overflow-hidden"
-            style={styles[`section${index + 1}` as keyof typeof styles]} // Explicitly cast the key
+            style={styles[`section${index + 1}` as keyof typeof styles]}
           >
             <img className="absolute inset-0 w-full h-full object-cover" src={section.gif} alt={section.title} />
             <div className="absolute inset-0 bg-gray-900/40" />
@@ -57,13 +57,13 @@ const HomePage = () => {
               </div>
               <motion.div className="flex gap-4 items-center justify-center flex-grow" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.3 }}>
                 <Button variant="white" size="lg" asChild className="flex items-center text-black gap-2">
-                  <Link href={section.learnMoreHref}>
+                  <Link href={section.learnMoreHref ?? "#"}>  {/* Add fallback href */}
                     Learn More
                     <ChevronRight className="w-5 h-5 text-black" />
                   </Link>
                 </Button>
                 <Button variant="secondary" size="lg" asChild className="flex items-center text-white gap-2">
-                  <Link href={section.workflowHref}>
+                  <Link href={section.workflowHref ?? "#"}>  {/* Add fallback href */}
                     Workflow
                     <ChevronRight className="w-5 h-5 text-white" />
                   </Link>
