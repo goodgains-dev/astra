@@ -7,12 +7,12 @@ import { motion } from "framer-motion";
 
 const HomePage = () => {
   const sections = [
-    { id: 0, title: "", gif: "/goodgains1.gif" }, // Ensure correct file path and case sensitivity
-    { id: 1, title: "Creation Simplified", gif: "/codevid.gif", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index.html" },
-    { id: 2, title: "Organization Simplified", gif: "/Organizationvid.gif", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index2.html" },
-    { id: 3, title: "Design Simplified", gif: "/Digital Presentation_1.gif", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index3.html" },
-    { id: 4, title: "Analysis Simplified", gif: "/analysissimplified.gif", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index4.html" },
-    { id: 5, title: "Marketing Simplified", gif: "/Marketingvid.gif", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index5.html" },
+    { id: 0, title: "", video: "/goodgains1.mp4" }, // Using .mp4 for video
+    { id: 1, title: "Creation Simplified", video: "/codevid.mp4", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index.html" },
+    { id: 2, title: "Organization Simplified", video: "/Organizationvid.mp4", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index2.html" },
+    { id: 3, title: "Design Simplified", video: "/Digital Presentation_1.mp4", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index3.html" },
+    { id: 4, title: "Analysis Simplified", video: "/analysissimplified.mp4", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index4.html" },
+    { id: 5, title: "Marketing Simplified", video: "/Marketingvid.mp4", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index5.html" },
   ];
 
   const styles = {
@@ -34,7 +34,7 @@ const HomePage = () => {
       <main className="w-full">
         {/* Section 0 */}
         <section className="relative h-screen p-5 md:p-10 flex items-center justify-center overflow-hidden" style={styles.section0}>
-          <img className="absolute inset-0 w-full h-full object-cover" src={sections[0].gif} alt="Section 0" />
+          <video className="absolute inset-0 w-full h-full object-cover" src={sections[0].video} autoPlay loop muted />
           <div className="absolute inset-0 bg-black/10" />
           <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
             {/* Section 0 Content */}
@@ -47,7 +47,7 @@ const HomePage = () => {
             className="relative h-screen p-5 md:p-10 flex flex-col items-center justify-center overflow-hidden"
             style={styles[`section${index + 1}` as keyof typeof styles]} // Explicitly cast the key
           >
-            <img className="absolute inset-0 w-full h-full object-cover" src={section.gif} alt={section.title} />
+            <video className="absolute inset-0 w-full h-full object-cover" src={section.video} autoPlay loop muted />
             <div className="absolute inset-0 bg-gray-900/40" />
             <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
               <div className="flex flex-col items-center justify-start pt-10 w-full">
