@@ -88,7 +88,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="https://goodgains.xyz"
+                href="https://goodgainsgram-landingpage.vercel.app/"
                 className="text-black hover:text-gray-400 text-sm font-medium transition-colors duration-200"
               >
                 Gram
