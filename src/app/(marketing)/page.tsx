@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const HomePage = () => {
   const sections = [
-    { id: 0, title: "", gif: "/goodgains1.gif" },
+    { id: 0, title: "", gif: "/goodgains1.gif" }, // Ensure correct file path and case sensitivity
     { id: 1, title: "Creation Simplified", gif: "/codevid.gif", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index.html" },
     { id: 2, title: "Organization Simplified", gif: "/Organizationvid.gif", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index2.html" },
     { id: 3, title: "Design Simplified", gif: "/Digital Presentation_1.gif", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index3.html" },
@@ -40,7 +40,6 @@ const HomePage = () => {
             {/* Section 0 Content */}
           </div>
         </section>
-
         {/* Render the rest of the sections */}
         {sections.slice(1).map((section, index) => (
           <section
