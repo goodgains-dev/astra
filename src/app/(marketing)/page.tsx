@@ -8,11 +8,11 @@ import { motion } from "framer-motion";
 const HomePage = () => {
   const sections = [
     { id: 0, title: "", gif: "/goodgains1.gif" },
-    { id: 1, title: "Creation Simplified", gif: "/codevid.gif", learnMoreHref: "/learn-more-creation", workflowHref: "/index.html" },
-    { id: 2, title: "Organization Simplified", gif: "/Organizationvid.gif", learnMoreHref: "/learn-more-organization", workflowHref: "/index2.html" },
-    { id: 3, title: "Design Simplified", gif: "/Digital Presentation_1.gif", learnMoreHref: "/learn-more-design", workflowHref: "/index3.html" },
-    { id: 4, title: "Analysis Simplified", gif: "/analysissimplified.gif", learnMoreHref: "/learn-more-analysis", workflowHref: "/index4.html" },
-    { id: 5, title: "Marketing Simplified", gif: "/Marketingvid.gif", learnMoreHref: "/learn-more-marketing", workflowHref: "/index5.html" },
+    { id: 1, title: "Creation Simplified", gif: "/codevid.gif", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index.html" },
+    { id: 2, title: "Organization Simplified", gif: "/Organizationvid.gif", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index2.html" },
+    { id: 3, title: "Design Simplified", gif: "/Digital Presentation_1.gif", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index3.html" },
+    { id: 4, title: "Analysis Simplified", gif: "/analysissimplified.gif", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index4.html" },
+    { id: 5, title: "Marketing Simplified", gif: "/Marketingvid.gif", learnMoreHref: "https://66f264ec74c2f6a84f8517a8--funny-vacherin-767340.netlify.app/", workflowHref: "/index5.html" },
   ];
 
   const styles = {
@@ -40,12 +40,13 @@ const HomePage = () => {
             {/* Section 0 Content */}
           </div>
         </section>
+
         {/* Render the rest of the sections */}
         {sections.slice(1).map((section, index) => (
           <section
             key={section.id}
             className="relative h-screen p-5 md:p-10 flex flex-col items-center justify-center overflow-hidden"
-            style={styles[`section${index + 1}` as keyof typeof styles]}
+            style={styles[`section${index + 1}` as keyof typeof styles]} // Explicitly cast the key
           >
             <img className="absolute inset-0 w-full h-full object-cover" src={section.gif} alt={section.title} />
             <div className="absolute inset-0 bg-gray-900/40" />
@@ -57,13 +58,13 @@ const HomePage = () => {
               </div>
               <motion.div className="flex gap-4 items-center justify-center flex-grow" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.3 }}>
                 <Button variant="white" size="lg" asChild className="flex items-center text-black gap-2">
-                  <Link href={section.learnMoreHref ?? "#"}>  {/* Add fallback href */}
+                  <Link href={section.learnMoreHref || "/"}>
                     Learn More
                     <ChevronRight className="w-5 h-5 text-black" />
                   </Link>
                 </Button>
                 <Button variant="secondary" size="lg" asChild className="flex items-center text-white gap-2">
-                  <Link href={section.workflowHref ?? "#"}>  {/* Add fallback href */}
+                  <Link href={section.workflowHref || "/"}>
                     Workflow
                     <ChevronRight className="w-5 h-5 text-white" />
                   </Link>
